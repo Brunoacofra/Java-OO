@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Banco people = new Banco("cleide","cc",50f);
-        Banco people1 = new Banco("denilson","cp",150f);
+        Banco people = new Banco("cleide","cc");
+        Banco people1 = new Banco("denilson","cp");
         people.setStatus(true);
         String status = people.getSaldo().toString();
         System.out.println("Seu saldo é de R$"+status);
