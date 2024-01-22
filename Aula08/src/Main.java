@@ -8,7 +8,7 @@ public class Main {
         l[4] = new Lutador("UFOCobol","Brasil",37,1.7f,119.3f,5,4,3);
         l[5] = new Lutador("Nerdaart","EUA",30,1.81f,105.7f,12,2,4);
         Luta l1 = new Luta();
-        l1.marcarLuta(l[0],l[5]);
+        l1.marcarLuta(l[0],l[0]);
         l1.lutar();
     }
 }
