@@ -1,24 +1,10 @@
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String sexo;
     private int idade;
-    public Pessoa(String n,String s,int i) {
-        this.setNome(n);
-        this.setSexo(s);
-        this.setIdade(i);
-    }
 
-
-    public String status() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", sexo='" + sexo + '\'' +
-                ", idade=" + idade +
-                '}';
-    }
-
-    public void fazerAniversario() {
-        this.setIdade(this.getIdade()+1);
+    public final void fazerAniversario() {
+        this.idade ++;
     }
 
     public String getNome() {
