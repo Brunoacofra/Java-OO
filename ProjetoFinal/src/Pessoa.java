@@ -1,9 +1,18 @@
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected int idade;
     protected String sexo;
-    protected int experinecia;
+    protected float experiencia;
 
+    public Pessoa(String nome,int idade,String sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.experiencia = 0;
+    }
+    public void ganharExp(int exp){
+        this.experiencia += exp;
+    }
     public String getNome() {
         return nome;
     }
@@ -14,9 +23,6 @@ public class Pessoa {
 
     public int getIdade() {
         return idade;
-    }
-    protected void ganharExp() {
-
     }
     public void setIdade(int idade) {
         this.idade = idade;
@@ -30,11 +36,11 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public int getExperinecia() {
-        return experinecia;
+    public float getExperinecia() {
+        return experiencia;
     }
 
-    public void setExperinecia(int experinecia) {
-        this.experinecia = experinecia;
+    public void setExperinecia(float experinecia) {
+        this.experiencia = experinecia;
     }
 }

@@ -1,23 +1,38 @@
 public class Video implements AcoesVideo {
     private String titulo;
-    private String avaliacao;
+    private int avaliacao;
     private int views;
     private int curtidas;
     private boolean reproduzindo;
 
+    public Video(String titulo){
+        this.reproduzindo = false;
+        this.views = 0;
+        this.curtidas = 0;
+        this.avaliacao = 1;
+        this.titulo = titulo;
+    }
     @Override
     public void play() {
-
+        if(isReproduzindo()){
+            System.out.println("Ja esta reproduzindo");
+        } else {
+            this.setReproduzindo(true);
+        }
     }
 
     @Override
     public void pause() {
-
+        if(isReproduzindo()){
+            this.setReproduzindo(false);
+        } else {
+            System.out.println("Já está pausado");
+        }
     }
 
     @Override
     public void like() {
-
+        this.curtidas ++;
     }
 
     public String getTitulo() {
@@ -28,11 +43,11 @@ public class Video implements AcoesVideo {
         this.titulo = titulo;
     }
 
-    public String getAvaliacao() {
+    public int getAvaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(String avaliacao) {
+    public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
 
